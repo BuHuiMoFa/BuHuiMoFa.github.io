@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>BuHuiMoFa</title>
+    <meta name="author" content="BuHuiMoFa" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Please turn on the cache browser by default after loading slowly</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BUHUIMOFA</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BUHUIMOFA</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="/images/background.jpg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>BuHuiMoFa</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2024/04/07/WarGame-Design/">
+        <h2 class="post-title">WarGame Design</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/4/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <span id="more"></span>
+
+
+<h2 id="1-Background"><a href="#1-Background" class="headerlink" title="1. Background"></a>1. Background</h2><p>In this game, players will immerse themselves in the heart of a futuristic conflict, where resources are scarce, and strategic prowess is paramount. As commanders of their respective factions, players will commandeer armies consisting of infantry, armored tank divisions, and powerful aircraft, each with its unique strengths and capabilities.</p>
+<p>The game unfolds on a dynamic battlefield, with players navigating diverse terrains such as plains, mountains, rainforests, lakes, and swamps, each of which presents its own challenges and advantages, requiring players to adapt their strategies accordingly.</p>
+<p>With alternating turns, players strategically deploy their forces, leveraging their units’ strengths and terrain features to outmaneuver and outsmart their opponents. Whether launching lightning-fast tank assaults on enemy positions, orchestrating guerrilla warfare in dense forests, or engaging in aerial dogfights above sprawling cities, every decision counts in this game.</p>
+<p>The goal is clear: seize control of key cities named “Velia”, Situated amidst diverse terrain, this city boasts abundant mineral reserves, advanced technology bases, and a strategic position, making it the focal point of contention for both sides, or annihilate all enemy forces to claim victory and ensure the survival and prosperity of your nation. </p>
+<p>In this war, victory not only means gaining resources and status but also influencing and controlling the future world order. It will provide players with a challenging and strategic war environment, testing their leadership and decision-making skills. Are you ready to lead your faction to glory and reshape the fate of the world? Enter the fray and command your forces in “Warfront: Clash of Nations”!</p>
+<h2 id="2-Gameplay"><a href="#2-Gameplay" class="headerlink" title="2. Gameplay"></a>2. Gameplay</h2><p>Battlefield<br>City<br><img src="/images/city.png"><br>All: Attack +2, Dodge +2<br>The city stands as the pivotal point amidst the chaotic battleground, its towering skyscrapers and fortified walls symbolizing both prosperity and strategic significance. Within its confines lie not only the wealth of resources and advanced technology crucial for sustaining a nation’s power, but also the key to victory in the war raging between the two superpowers.</p>
+<p>Control of the city provides substantial advantages to the occupying faction. Its well-developed infrastructure facilitates logistics and troop movements, allowing for more efficient deployment of forces. Furthermore, the city’s dense urban environment offers ample cover and defensive positions, making it inherently more challenging for attackers to breach its defenses.</p>
+<p>Moreover, the city’s strategic importance extends beyond mere tactical considerations. Occupying the city bestows significant bonuses to both offensive and defensive capabilities for the controlling faction. These bonuses could range from heightened attack power to increased dodge rates, providing a substantial edge in combat engagements.</p>
+<p>Plains<br><img src="/images/Plains.png"><br>Tank: Attack +1<br>The plains stretch far and wide across the battlefield, offering expansive and open terrain for military operations. Characterized by vast stretches of flat land and minimal natural obstacles, the plains provide an ideal environment for maneuverable units to deploy and engage in combat.</p>
+<p>In this terrain, the absence of significant obstacles allows for swift movement and flexible tactical maneuvers. Armored vehicles, particularly tanks, reign supreme on the plains, utilizing their speed and firepower to dominate the battlefield. With ample room to maneuver and line of sight unobstructed by terrain features, tanks can effectively engage enemy targets from a distance and provide essential fire support to advancing ground forces.</p>
+<p>Mountains<br><img src="/images/mountains.png"><br>Infantry: Attack +1<br>Tank: Movement speed -2<br>The mountainous terrain presents a rugged and formidable landscape, characterized by steep slopes, rocky outcrops, and dense vegetation. The rugged topography of the mountains offers natural concealment and cover, allowing guerrilla aircrafts to blend seamlessly into their surroundings and launch surprise attacks on unsuspecting enemies. Narrow mountain passes and winding trails create chokepoints that can be exploited to funnel enemy forces into ambush zones, where they are vulnerable to coordinated attacks from concealed positions.</p>
+<p>Furthermore, the elevation advantage afforded by mountainous terrain allows guerrilla aircrafts to control key vantage points and observation posts, enabling them to monitor enemy movements and disrupt supply lines with sniper fire and sabotage operations. Additionally, the rugged terrain poses significant challenges to mechanized units, impeding their mobility and making them vulnerable to ambushes and improvised explosive devices (IEDs).</p>
+<p>In this hostile environment, infantry units play a crucial role in navigating and exploiting the terrain to their advantage. Their expertise in terrain analysis and fortification construction allows them to establish defensive positions and fortifications in strategically advantageous locations, enhancing their ability to repel enemy attacks and prolong engagements in the mountainous terrain.</p>
+<p>Rainforests<br><img src="/images/Rain.png"><br>Infantry: Attack +1, Dodge +1<br>Tank: Attack -1, Dodge –1, Movement speed -1<br>The rainforest terrain is portrayed as both challenging and hazardous, yet it also serves as an optimal environment for covert operations. The dense foliage and thick vegetation offer ample concealment for troops, enabling infantry units to exploit the surroundings for stealthy maneuvers and execute surprise attacks. In this terrain, infantry units greatly benefit from enhanced attack and dodge attributes, effectively utilizing natural obstacles like trees and thickets to evade enemy assaults and execute ambushes with increased efficiency.</p>
+<p>Conversely, the rainforest terrain poses significant challenges for tank units due to its unsuitability for large-scale mechanized equipment and combat operations. The dense foliage and tangled vegetation impede the mobility of tanks, rendering maneuverability and engagement difficult. Moreover, the intricate and unpredictable nature of the rainforest landscape elevates the risk of tank units falling prey to ambushes, rendering them vulnerable targets for enemy forces. Consequently, the attack and dodge capabilities of tank units are noticeably diminished in this environment, as they struggle to capitalize on their strengths and become more susceptible to enemy ambushes and assaults.</p>
+<p>Swamps<br><img src="/images/Swamps.png"><br>Tank: Inaccessible.<br>Infantry: Movement speed - 1<br>The swamp is characterized by its waterlogged and muddy terrain, adorned with tangled vegetation, and shrouded in dense fog. This hazardous landscape presents formidable challenges to both tanks and infantry units alike. Tanks often find themselves mired in the thick, viscous mud, struggling to traverse the terrain effectively and risking immobilization. The waterlogged nature of the swamp further impedes their mobility, constraining their ability to maneuver and engage enemy forces effectively.</p>
+<p>Similarly, infantry units encounter significant obstacles when navigating through the swamp. The marshy ground slows their progress and drains their stamina, rendering movement arduous and exhausting. Dense vegetation adds to their plight, obstructing their path and forcing them to navigate through narrow, winding trails. Additionally, the murky waters of the swamp conceal hazards such as hidden sinkholes and quicksand, posing a constant threat to infantry units as they traverse the treacherous terrain.</p>
+<p>Lakes<br><img src="/images/Lakes.png"><br>Tank: Inaccessible.<br>Infantry: Inaccessible<br>Lakes present expansive bodies of water, characterized by clear waters and calm waves. However, beneath their serene surface lies unseen dangers of considerable depth. For tank units, lakes serve as impassable barriers. Tanks cannot traverse lakes due to their depth exceeding the vehicles’ operational capabilities, and the presence of mud and rocks in the water may damage tank mechanics, rendering them stranded. Similarly, infantry face similar challenges. They cannot swim across lakes, and the water bodies may conceal hazards such as submerged depressions or aquatic life. Consequently, lakes become natural barriers hindering both offensive maneuvers and defensive strategies, requiring strategic planning and clever deployment to overcome.</p>
+<p>Railways<br><img src="/images/Rali.png"><br>Infantry: Movement speed +5 (on railways only)<br>In the game, railways serve as a crucial interactive element, profoundly impacting the strategic and tactical aspects of the battlefield.</p>
+<p>Railways not only provide infantry units with an additional movement speed boost, allowing them to traverse the map more swiftly, but also enhance the support efficiency of infantry units on the battlefield. When infantry units move on railways, they can reach key positions on the battlefield more rapidly and provide assistance and support more quickly, playing a vital role in combat.</p>
+<p>However, the utilization of railways is not limited to offensive maneuvers. In defense, players can also utilize railways to swiftly mobilize troops and mount powerful counterattacks against enemy advances. Therefore, players need to closely monitor the use of railways in battle and devise the most effective strategies and tactics based on terrain, enemy movements, and their own forces.</p>
+<h2 id="Role-Attributes"><a href="#Role-Attributes" class="headerlink" title="Role Attributes"></a>Role Attributes</h2><p>Infantries<br><img src="/images/B1.png"><br>Health: 8<br>Movement speed: 2<br>Attack: 3<br>Dodge: 4</p>
+<p>Tanks<br><img src="/images/T1.png"><br>Health: 20<br>Movement speed: 3<br>Attack: 5<br>Dodge: 3</p>
+<p>Aircrafts<br><img src="/images/F1.png"><br>Health: 6<br>Movement speed: 5<br>Attack: 8<br>Dodge: 6</p>
+<h2 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h2><p>a)<strong>Two-sided confrontation</strong>: There are two opposing forces in the game, red and blue, and they take turns.</p>
+<p>b)<strong>Random Factor</strong>: Use only one dice each round to increase the randomness and variability of the game.</p>
+<p>c)<strong>First Move Decision</strong>: Use coin toss to decide which side will act first, increasing the tension and strategy of the game.</p>
+<p>d)<strong>Initial state</strong>: At the beginning of the game, each force has 10 infantries, 4 tanks and 3 aircrafts, providing players with a basic troop configuration.</p>
+<p>e)<strong>Turn Phase</strong>: Each round is divided into three phases, including the movement phase of tanks, aircraft, and infantries, giving each unit a chance to act. The tank can move up to 2 times each time; the aircraft can move at most once; the infantry can move up to 3 times each time.</p>
+<p>f)<strong>Unit Characteristics</strong>: Infantries can attack all units, tanks can attack all units except aircraft, and aircraft can attack all units. Each unit has its own role and function.</p>
+<p>g)<strong>Attack Range</strong>: The attack range of a unit is adjacent grids, which enhances the strategic value of different locations on the map.</p>
+<p>h)<strong>Damage Calculation</strong>: The damage value is determined by attack power, dice points, terrain attribute bonus and the dodge attribute of the target unit, which increases the depth and strategy of the battle. The damage calculation formula is damage value &#x3D; attack power + Terrain attribute bonus + dice points – dodge (&lt;&#x3D;0: No damage caused; &gt;0: actual damage).</p>
+<p>i)<strong>Unit interaction</strong>: Infantries can repair tanks, and aircraft can deliver infantries, adding more tactical options and combat strategies to the game. The formula for repairing a tank is: health &#x3D; random dice points.</p>
+<p>3.Victory conditions<br><strong>Occupation of the Central City</strong>: The primary objective of the game is to occupy the central city. If one side successfully captures the central city and maintains control for a certain number of consecutive turns (e.g., 10 turns), that side achieves victory.</p>
+<p><strong>Annihilation of Enemy Units</strong>: If one side successfully eliminates all enemy units, rendering the opponent’s forces completely defeated, that side achieves victory.</p>
+<p><strong>Surrender or Inability to Continue Combat</strong>: If one side chooses to surrender or becomes unable to continue the battle due to reasons such as resource depletion or severely diminished forces, the opposing side will achieve victory.</p>
+<p><strong>Time Limit</strong>: If none of the sides meet the victory conditions within a certain number of turns, the game will end in a draw.</p>
+<h2 id="4-Prototyping"><a href="#4-Prototyping" class="headerlink" title="4. Prototyping"></a>4. Prototyping</h2><p><img src="/images/D1.png"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Games/" style="color: #ff7d73">Games,</a>
+        </span>
+        
+    </div>
+    <a href="/2024/04/07/WarGame-Design/" class="go-post">Full Text</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <span class="current">1</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">BuHuiMoFa</div>
+        <div class="description">
+            <p>Fun Life , Fun Games.<br>…</p>
+
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://space.bilibili.com/33840129?spm_id_from=333.1007.0.0">BiliBili</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/BuHuiMoFa">Github</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2024 BuHuiMoFa
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;BuHuiMoFa
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
