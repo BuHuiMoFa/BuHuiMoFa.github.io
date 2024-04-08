@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Greedy villagers from Shanhai Meridian | BuHuiMoFa</title>
+    <meta name="author" content="BuHuiMoFa" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Please turn on the cache browser by default after loading slowly</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BUHUIMOFA</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BUHUIMOFA</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Greedy villagers from Shanhai Meridian</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/4/8
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Model/" style="color: #03a9f4">Model</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>Regarding the adaptation of traditional Chinese myths, the content is beginner Maya.</p>
+<span id="more"></span>
+
+<p>##1. Story background</p>
+<p>   Storytelling：Greedy villagers</p>
+<p>   The story comes from a little boy, from a remote and poor village. Because he was sick, his family had no money to ask the doctor to help come over to cure the disease.</p>
+<p>   One day, a witch doctor came to this village. There is a way that there is a god beast in the place next to the village (on the mountain). Her name is Lu Shu. Her hair can make people healthy and make people a thousand miles a day. As long as she gets her hair, she can solve the village.</p>
+<p>   The villagers believed the words of the witch doctor. Every day, she wanted to do my best to get her hair with a weapon to live in Lushu. Finally, Lu Shu rushed to be irritable. She was angry. She threw the villagers to the cliffs one by one. Inside, and warned the villagers with her voice, don’t bother her again.</p>
+<p>##1. Sketches - Design pictures</p>
+<p>   <img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.001.png"></p>
+<p>##1. 3D object list</p>
+<table>
+<thead>
+<tr>
+<th>Object1:Wooden box</th>
+<th align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.002.png"></th>
+<th>In the scene, it is just furnishings.</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Object2:Wooden box</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.003.png"></td>
+<td>In the scene, it is just furnishings.</td>
+</tr>
+<tr>
+<td>Object3:Table</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.004.png"></td>
+<td>In the scene, it is just furnishings.</td>
+</tr>
+<tr>
+<td>Object4:Barrel</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.005.png"></td>
+<td>In the scene, it is just furnishings.</td>
+</tr>
+<tr>
+<td>Object5: Chimney</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.006.png"></td>
+<td>In the scene, it is just furnishings.</td>
+</tr>
+<tr>
+<td>Object6: Stairs</td>
+<td align="center"><p></p><p><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.007.png"></p></td>
+<td>In the scene, it is just furnishings.</td>
+</tr>
+<tr>
+<td>Object7:Wooden beam</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.008.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+<tr>
+<td>Object8: Eaves</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.009.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+<tr>
+<td>Object9:Eaves</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.010.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+<tr>
+<td>Object10:Quilt</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.011.png"></td>
+<td>In the story, the props of the characters.</td>
+</tr>
+<tr>
+<td>Object11:Bed</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.012.png"></td>
+<td>In the story, the props of the characters.</td>
+</tr>
+<tr>
+<td>Object12: Stove</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.013.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+<tr>
+<td>Object13:Table</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.014.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+<tr>
+<td>Object14: Fork</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.015.png"></td>
+<td>In the story, the props of the characters.</td>
+</tr>
+<tr>
+<td>Object15:Fan</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.016.png"></td>
+<td>In the story, the props of the characters.</td>
+</tr>
+<tr>
+<td>Object16: Cane</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.017.png"></td>
+<td>In the story, the props of the characters.</td>
+</tr>
+<tr>
+<td>Object17: Roof</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.018.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+<tr>
+<td>Object18:Carpet</td>
+<td align="center"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.019.png"></td>
+<td>In the scene, it is just furnishings</td>
+</tr>
+</tbody></table>
+<p>   3D object list2: Doctor, Penjor, Villager,BOSS (Lu Shu)</p>
+<p>##1. 3D Game World</p>
+<p>   3D Enviroment1: Villagers’ house</p>
+<p>   In the scene of this room, I plan to make it look worn.</p>
+<ol>
+<li><p>Story character</p>
+<p>Doctor</p>
+<p>The middle finger of Jianghu Lang shook a string of bells wandering around or selling medicines to sell medicines. Langzhong, he used to refer to a doctor.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.020.png" alt="ref1"></th>
+<th align="center"><p></p><p></p><p><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.021.png"></p></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><p><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.022.png">    <img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.023.png"></p><p><a target="_blank" rel="noopener" href="https://images.app.goo.gl/7S1LNzos35mDwNjL8">https://images.app.goo.gl/7S1LNzos35mDwNjL8</a></p></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>In the above form, the image and reference example of the doctor of this project are expressed. In this story, the doctor is a confusing bad guy. He cheated the villagers to hurt the god who protect the village.</p>
+<p>Villagers</p>
+<p>In the above form, the image and reference example of the doctor of this project are expressed. In this story, the villagers live in a harsh environment, and people have no money to cure them. Because of the ignorance of the villagers, I believe the doctor said.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.024.png" alt="ref2"></th>
+<th><p></p><p></p><p></p><p></p><p><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.025.png"></p></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><p><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.026.png"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.027.png"></p><p><a target="_blank" rel="noopener" href="https://images.app.goo.gl/aaH4hXpxe8iUWBxn8">https://images.app.goo.gl/aaH4hXpxe8iUWBxn8</a></p></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Lu Shu</p>
+<p>In the story of “Shan Hai Jing”, Lu Shu lives in Puyang Mountain, looks like a horse, with a white head, a tiger’s pattern on his body, and a red tail. The fur can make the descendants reproduce.</p>
+<p>In the project, I let it become a person, it holds the scepter and protects people on the mountains.</p>
+<p>In the story, the villagers listened to what the doctor said, which caused her to be very angry and left the people on the mountain as a warning to people.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.028.png" alt="ref3"></th>
+<th><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.029.png"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.030.png"><a target="_blank" rel="noopener" href="https://bkimg.cdn.bcebos.com/pic/b64543a98226cffc1e1785bc614c5d90f603738dbc22?x-bce-process=image/format,f%5C_auto">https://bkimg.cdn.bcebos.com/pic/b64543a98226cffc1e1785bc614c5d90f603738dbc22?x-bce-process=image/format,f\_auto</a></td>
+<td><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.031.jpeg" alt="IMG_256"></td>
+</tr>
+</tbody></table>
+<p>In the above form, the image and reference example of the doctor of this project are expressed.</p>
+</li>
+</ol>
+<p>##1. Texture</p>
+<p>   Scene 1: wooden floor, metal silver, cloth, wall, character skin</p>
+<p>   Scene 2: Woodland, character skin, weapons, trees</p>
+<ol>
+<li><p>Main updates</p>
+<p>7.1 Appearance</p>
+<table>
+<thead>
+<tr>
+<th>Lu Shu</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Original appearance</td>
+<td align="left">Now</td>
+</tr>
+<tr>
+<td><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.028.png" alt="ref3"></td>
+<td align="left"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.032.png"></td>
+</tr>
+</tbody></table>
+<p>Here I modified some content:</p>
+<p>1. Hair and hair color, because here I think it is a bit unsuitable, I turn the short hair on the original model into long hair.</p>
+</li>
+<li><p><code> </code>I use the “extrusion function” directly from the character’s body, make pants and tops, and add color.</p>
+<table>
+<thead>
+<tr>
+<th>Villagers</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Original appearance</td>
+<td align="left">Now</td>
+</tr>
+<tr>
+<td><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.033.png" alt="ref4"></td>
+<td align="left"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.034.png"></td>
+</tr>
+</tbody></table>
+<p>Here I modified some content:</p>
+</li>
+<li><p>I use the “extrusion function” directly from the character’s body, make pants and tops, and add color.</p>
+<table>
+<thead>
+<tr>
+<th>Doctor</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Original appearance</td>
+<td align="left">Now</td>
+</tr>
+<tr>
+<td><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.020.png" alt="ref1"></td>
+<td align="left"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.035.png"></td>
+</tr>
+</tbody></table>
+<p>Here I modified some content:</p>
+</li>
+<li><p>I use the “extrusion function” directly from the character’s body, make pants and tops, and add color.</p>
+<p>7.2 Skeleton</p>
+<p>The operation of the following content:</p>
+<p>The plug -in using the skeleton is Advancedskeleton. Because the plug -in in Maya cannot show a better animation effect, bone binding is used using ADV, and the curve control is used to control the role.</p>
+</li>
+</ol>
+<table>   <tr><th valign="top">Lu Shu</th><th valign="top"></th></tr>
+   <tr><td rowspan="2" valign="top"><p></p><p></p><p></p><p></p><p></p><p></p><p>The main purpose is to make the character move.</p></td><td valign="top">![](Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.036.png)</td></tr>
+   <tr><td valign="top">![](Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.037.png)</td></tr>
+</table>
+
+
+<table>   <tr><th valign="top">Doctor</th><th valign="top"></th></tr>
+   <tr><td rowspan="2" valign="top"><p></p><p></p><p></p><p></p><p></p><p></p><p>The main purpose is to make the character move.</p></td><td valign="top">![](Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.038.png)</td></tr>
+   <tr><td valign="top">![](Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.039.png)</td></tr>
+</table>
+
+
+<table>   <tr><th valign="top">Villagers</th><th valign="top"></th></tr>
+   <tr><td rowspan="2" valign="top"><p></p><p></p><p></p><p></p><p></p><p></p><p>The main purpose is to make the character move.</p></td><td valign="top">![](Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.040.png)</td></tr>
+   <tr><td valign="top">![](Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.041.png)</td></tr>
+</table>
+
+<p>   7.3 Skeletal animation (10s)</p>
+<p>   <img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.042.png"><img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.043.png"></p>
+<p>   Use the walking mode in this project to demonstrate the animation. In the subsequent content, more movements will be updated.</p>
+<p>   7.4 Other content</p>
+<p>   Since the project needs to use the form of illustrations to perform the process, I use SAI software to perform my painting.</p>
+<p>   <img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.044.jpeg" alt="2024-03-23_11-01-18-000"></p>
+<p>   Inspired by the scene of the ancient Chinese game “Swordsman Love 3”.</p>
+<p>   <img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.045.png"></p>
+<p>   This illustration shows the appearance of the village, so that the audience can feel that the village is very worn.</p>
+<p>   <img src="/Aspose.Words.199d5735-2b54-4510-9ed8-8b000d28f896.046.png"></p>
+<p>   This scene describes the process of walking into the village from distant places.</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2024 BuHuiMoFa
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;BuHuiMoFa
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
